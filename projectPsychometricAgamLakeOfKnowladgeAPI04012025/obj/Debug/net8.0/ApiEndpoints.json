@@ -1,0 +1,696 @@
+[
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ExamController",
+    "Method": "GetExams",
+    "RelativePath": "api/Exam",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ExamController",
+    "Method": "GetExamById",
+    "RelativePath": "api/Exam/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ExamController",
+    "Method": "GetExamsAfterDate",
+    "RelativePath": "api/Exam/AfterDate/{date}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ExamController",
+    "Method": "GetExamsByDate",
+    "RelativePath": "api/Exam/ByDate/{date}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "GetGuides",
+    "RelativePath": "api/Guide",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "AddGuide",
+    "RelativePath": "api/Guide",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newGuide",
+        "Type": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes.Guide",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "GetGuideById",
+    "RelativePath": "api/Guide/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "UpdateGuide",
+    "RelativePath": "api/Guide/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedGuide",
+        "Type": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes.Guide",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "DeleteGuide",
+    "RelativePath": "api/Guide/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "AuthenticateGuide",
+    "RelativePath": "api/Guide/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "GetRecentGuides",
+    "RelativePath": "api/Guide/Recent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "GetGuidesWithEnglishExpertise",
+    "RelativePath": "api/Guide/WithEnglishExpertise",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.GuideController",
+    "Method": "GetGuidesWithMultipleExpertise",
+    "RelativePath": "api/Guide/WithMultipleExpertise",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.PracticeController",
+    "Method": "GetPractices",
+    "RelativePath": "api/Practice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.PracticeController",
+    "Method": "GetPracticesAboveScore",
+    "RelativePath": "api/Practice/AboveScore/{score}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "score",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.PracticeController",
+    "Method": "GetPracticesByCategory",
+    "RelativePath": "api/Practice/ByCategory/{category}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.PracticeController",
+    "Method": "GetPracticesByDifficulty",
+    "RelativePath": "api/Practice/ByDifficulty/{difficultyLevel}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "difficultyLevel",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.PracticeController",
+    "Method": "GetPracticesByStudentId",
+    "RelativePath": "api/Practice/ByStudent/{studentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionController",
+    "Method": "GetQuestions",
+    "RelativePath": "api/Question",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionController",
+    "Method": "GetQuestionById",
+    "RelativePath": "api/Question/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionController",
+    "Method": "UpdateQuestion",
+    "RelativePath": "api/Question/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedQuestion",
+        "Type": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes.Question",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionController",
+    "Method": "GetQuestionsByDifficulty",
+    "RelativePath": "api/Question/ByDifficulty/{difficultyLevel}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "difficultyLevel",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionController",
+    "Method": "GetQuestionsByQuestionnaire",
+    "RelativePath": "api/Question/ByQuestionnaire/{questionnaireId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "questionnaireId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionnaireController",
+    "Method": "GetQuestionnaires",
+    "RelativePath": "api/Questionnaire",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionnaireController",
+    "Method": "GetQuestionnaireById",
+    "RelativePath": "api/Questionnaire/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionnaireController",
+    "Method": "GetQuestionnairesByCategory",
+    "RelativePath": "api/Questionnaire/ByCategory/{category}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.QuestionnaireController",
+    "Method": "GetQuestionnairesByExam",
+    "RelativePath": "api/Questionnaire/ByExam/{examId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "examId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ResultController",
+    "Method": "GetResults",
+    "RelativePath": "api/Result",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ResultController",
+    "Method": "GetResultsAboveScore",
+    "RelativePath": "api/Result/AboveScore/{score}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "score",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ResultController",
+    "Method": "GetResultsByDate",
+    "RelativePath": "api/Result/ByDate/{date}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ResultController",
+    "Method": "GetResultsByExam",
+    "RelativePath": "api/Result/ByExam/{examId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "examId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ResultController",
+    "Method": "GetResultsByStudent",
+    "RelativePath": "api/Result/ByStudent/{studentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ReviewController",
+    "Method": "GetReviews",
+    "RelativePath": "api/Review",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ReviewController",
+    "Method": "AddReview",
+    "RelativePath": "api/Review",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newReview",
+        "Type": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes.Review",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.ReviewController",
+    "Method": "DeleteReview",
+    "RelativePath": "api/Review/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "GetStudents",
+    "RelativePath": "api/Student",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "AddStudent",
+    "RelativePath": "api/Student",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newStudent",
+        "Type": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes.Student",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "GetStudentById",
+    "RelativePath": "api/Student/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "UpdateStudent",
+    "RelativePath": "api/Student/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedStudent",
+        "Type": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes.Student",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "DeleteStudent",
+    "RelativePath": "api/Student/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "AuthenticateStudent",
+    "RelativePath": "api/Student/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "GetStudentsWithProgressEnglishAbove",
+    "RelativePath": "api/Student/ProgressEnglishAbove/{level}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "level",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "GetStudentsRegisteredAfter",
+    "RelativePath": "api/Student/RegisteredAfter/{date}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "GetStudentsWithTotalProgressAbove",
+    "RelativePath": "api/Student/TotalProgressAbove/{total}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "total",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.StudentController",
+    "Method": "GetStudentsWithAdjustments",
+    "RelativePath": "api/Student/WithAdjustments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projectPsychometricAgamLakeOfKnowladgeAPI04012025.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[projectPsychometricAgamLakeOfKnowladgeAPI04012025.WeatherForecast, projectPsychometricAgamLakeOfKnowladgeAPI04012025, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

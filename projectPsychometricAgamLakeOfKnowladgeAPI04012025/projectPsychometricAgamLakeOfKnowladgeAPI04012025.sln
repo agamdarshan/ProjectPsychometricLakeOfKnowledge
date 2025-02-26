@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "projectPsychometricAgamLakeOfKnowladgeAPI04012025", "projectPsychometricAgamLakeOfKnowladgeAPI04012025.csproj", "{CB2C1CB8-4C16-4A64-84E9-ACF15CEF5288}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAppLakeOfKnowledge04012025", "..\BlazorWebAppLakeOfKnowledge04012025\BlazorWebAppLakeOfKnowledge04012025.csproj", "{E98199DF-E235-4A7F-B921-F1E4053FDD97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB2C1CB8-4C16-4A64-84E9-ACF15CEF5288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB2C1CB8-4C16-4A64-84E9-ACF15CEF5288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB2C1CB8-4C16-4A64-84E9-ACF15CEF5288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB2C1CB8-4C16-4A64-84E9-ACF15CEF5288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98199DF-E235-4A7F-B921-F1E4053FDD97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98199DF-E235-4A7F-B921-F1E4053FDD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98199DF-E235-4A7F-B921-F1E4053FDD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98199DF-E235-4A7F-B921-F1E4053FDD97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F15EC36-28A3-4E66-B021-6A709A240694}
+	EndGlobalSection
+EndGlobal

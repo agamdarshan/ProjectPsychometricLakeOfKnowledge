@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\projectPsychometricAgamLakeOfKnowladgeAPI04012025.props" />
+</Project>
