@@ -1,0 +1,98 @@
+﻿
+@page "/fetchdataapi"
+@using projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes
+@inject IHttpClientFactory HttpClientFactory
+
+<h3>Fetch Guides from API</h3>
+
+<!-- Dropdown to select a query -->
+<label for="querySelect">Select Query:</label>
+<select id="querySelect" @onchange="HandleQueryChange">
+    <option value="all">All Guides</option>
+    <option value="english">Guides with Expertise in English</option>
+    <option value="recent">Guides Registered in the Last Year</option>
+</select>
+
+@if (guides == null)
+{
+    <p>Loading...</p>
+}
+else if (guides.Count == 0)
+{
+    <p>No guides found.</p>
+}
+else
+{
+    <table style="width: 100%; border-collapse: collapse; text-align: left; border: 1px solid #ddd;">
+        <thead style="background-color: #f2f2f2;">
+            <tr>
+                <th style="padding: 8px; border: 1px solid #ddd;">ID</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Name</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Email</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Phone Number</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Registration Date</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Expertise in English</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Expertise in Quantity</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Expertise in Hebrew</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var guide in guides)
+            {
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #ddd;">@guide.Id</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">@guide.Name</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">@guide.Email</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">@guide.PhoneNumber</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">@guide.RegistrationDate.ToShortDateString()</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">@(guide.ExpertiseEnglish ? "Yes" : "No")</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">@(guide.ExpertiseQuantity ? "Yes" : "No")</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">@(guide.ExpertiseHebrew ? "Yes" : "No")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Guide> guides;
+
+    // Method to fetch guides based on the selected query
+    private async Task FetchGuides(string query)
+    {
+        var client = HttpClientFactory.CreateClient("API");
+        HttpResponseMessage response;
+
+        // Fetch based on the selected query
+        if (query == "english")
+        {
+            response = await client.GetAsync("api/Guide/ByExpertiseEnglish");
+        }
+        else if (query == "recent")
+        {
+            response = await client.GetAsync("api/Guide/RegisteredInLastYear");
+        }
+        else
+        {
+            response = await client.GetAsync("api/Guide");
+        }
+
+        if (response.IsSuccessStatusCode)
+        {
+            guides = await response.Content.ReadFromJsonAsync<List<Guide>>();
+        }
+    }
+
+    // Handle dropdown change event
+    private async Task HandleQueryChange(ChangeEventArgs e)
+    {
+        var selectedQuery = e.Value.ToString();
+        await FetchGuides(selectedQuery);
+    }
+
+    // Initialize the component by fetching all guides
+    protected override async Task OnInitializedAsync()
+    {
+        await FetchGuides("all");
+    }
+}
