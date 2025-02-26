@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlazorWebAppLakeOfKnowledge04012025
+build_property.RootNamespace = BlazorWebAppLakeOfKnowledge04012025
+build_property.ProjectDir = C:\Users\User\source\repos\BlazorWebAppLakeOfKnowledge04012025\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\BlazorWebAppLakeOfKnowledge04012025
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/AdminPages/AdminContentManagment.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2VzXEFkbWluQ29udGVudE1hbmFnbWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/AdminPages/AdminDataAnalysis.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2VzXEFkbWluRGF0YUFuYWx5c2lzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/AdminPages/AdminGuideDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2VzXEFkbWluR3VpZGVEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/AdminPages/AdminMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2VzXEFkbWluTWFpblBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/AdminPages/AdminReviewsManager.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2VzXEFkbWluUmV2aWV3c01hbmFnZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/AdminPages/AdminShowSpecificStudentDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2VzXEFkbWluU2hvd1NwZWNpZmljU3R1ZGVudERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/AdminPages/AdminStudentDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2VzXEFkbWluU3R1ZGVudERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/AdminPages/AdminUsersManagment.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblBhZ2VzXEFkbWluVXNlcnNNYW5hZ21lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXEhvbWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/LoginAdmin.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXExvZ2luQWRtaW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/LoginChoose.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXExvZ2luQ2hvb3NlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/LoginGuide.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXExvZ2luR3VpZGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/LoginStudent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXExvZ2luU3R1ZGVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/RegisterChoose.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXFJlZ2lzdGVyQ2hvb3NlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/RegisterGuide.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXFJlZ2lzdGVyR3VpZGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/RegisterStudent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXFJlZ2lzdGVyU3R1ZGVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuestPages/ReviewsDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWVzdFBhZ2VzXFJldmlld3NEaXNwbGF5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuidePages/GuideMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWlkZVBhZ2VzXEd1aWRlTWFpblBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuidePages/GuideShowExams.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWlkZVBhZ2VzXEd1aWRlU2hvd0V4YW1zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuidePages/GuideShowQuestions.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWlkZVBhZ2VzXEd1aWRlU2hvd1F1ZXN0aW9ucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/GuidePages/GuideUpdateQuestionsInformation.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHdWlkZVBhZ2VzXEd1aWRlVXBkYXRlUXVlc3Rpb25zSW5mb3JtYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/OtherPages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPdGhlclBhZ2VzXENvdW50ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/OtherPages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPdGhlclBhZ2VzXEVycm9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/OtherPages/FetchDataFromApi.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPdGhlclBhZ2VzXEZldGNoRGF0YUZyb21BcGkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/OtherPages/TestApiAndRazor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPdGhlclBhZ2VzXFRlc3RBcGlBbmRSYXpvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/OtherPages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPdGhlclBhZ2VzXFdlYXRoZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/StudentPages/StudentAddReview.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdHVkZW50UGFnZXNcU3R1ZGVudEFkZFJldmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/StudentPages/StudentExam.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdHVkZW50UGFnZXNcU3R1ZGVudEV4YW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/StudentPages/StudentInformation.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdHVkZW50UGFnZXNcU3R1ZGVudEluZm9ybWF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/StudentPages/StudentMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdHVkZW50UGFnZXNcU3R1ZGVudE1haW5QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Pages/StudentPages/StudentPracetice.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdHVkZW50UGFnZXNcU3R1ZGVudFByYWNldGljZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/BlazorWebAppLakeOfKnowledge04012025/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-tl2q2qakru

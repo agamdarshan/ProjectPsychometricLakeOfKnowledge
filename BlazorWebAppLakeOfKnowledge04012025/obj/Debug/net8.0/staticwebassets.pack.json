@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\BlazorWebAppLakeOfKnowledge04012025\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorWebAppLakeOfKnowledge04012025.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BlazorWebAppLakeOfKnowledge04012025.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\BlazorWebAppLakeOfKnowledge04012025\\wwwroot\\Images\\jpeg_LOGO_LAKE_OF_KNOWLEDGE_2025.jpg",
+      "PackagePath": "staticwebassets\\Images\\jpeg_LOGO_LAKE_OF_KNOWLEDGE_2025.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\BlazorWebAppLakeOfKnowledge04012025\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\BlazorWebAppLakeOfKnowledge04012025\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\BlazorWebAppLakeOfKnowledge04012025\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\BlazorWebAppLakeOfKnowledge04012025\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorWebAppLakeOfKnowledge04012025.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlazorWebAppLakeOfKnowledge04012025.props",
+      "PackagePath": "build\\BlazorWebAppLakeOfKnowledge04012025.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorWebAppLakeOfKnowledge04012025.props",
+      "PackagePath": "buildMultiTargeting\\BlazorWebAppLakeOfKnowledge04012025.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorWebAppLakeOfKnowledge04012025.props",
+      "PackagePath": "buildTransitive\\BlazorWebAppLakeOfKnowledge04012025.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

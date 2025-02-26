@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BlazorWebAppLakeOfKnowledge04012025.props" />
+</Project>

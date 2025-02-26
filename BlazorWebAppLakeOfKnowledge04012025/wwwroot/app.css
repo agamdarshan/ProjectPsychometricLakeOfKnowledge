@@ -1,0 +1,483 @@
+﻿/* Ensure full page coverage */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh; /* Ensures at least full viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+/* Layout structure */
+.page {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures it can grow beyond the viewport */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #d3d3d3; /* Light gray */
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+    /* Sidebar Links */
+    .sidebar .nav-item {
+        padding: 10px 20px;
+    }
+
+        .sidebar .nav-item .nav-link {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+            .sidebar .nav-item .nav-link:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+/* Navbar */
+.navbar {
+    background-color: #343a40; /* Dark gray */
+    color: white;
+    padding: 10px 15px;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content */
+.content {
+    margin-left: 250px; /* Leaves space for sidebar */
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+
+
+/* Responsive Sidebar */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 0;
+        position: absolute;
+    }
+
+        .sidebar.open {
+            width: 250px;
+        }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+
+/* Main content container */
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 250px);
+    height: 100vh;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 125px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+    .nav-link:hover {
+        background-color: #e0e0e0;
+    }
+
+/* Main Section */
+main {
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Top Row */
+.top-row {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Main Content Styling */
+.content-body {
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+/* Error UI */
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
+
+
+
+
+
+<style >
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 125px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+    .nav-link:hover, .nav-link.active {
+        background-color: #e0e0e0;
+    }
+
+<style >
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 125px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+    .nav-link:hover, .nav-link.active {
+        background-color: #e0e0e0;
+    }
+
+
+
+
+.main-content {
+    padding: 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-management-buttons {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.management-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.students-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.guides-button {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+
+.specific-student-button {
+    background-color: #FF9800; /* Orange */
+    color: white;
+}
+
+.management-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+
+/* כותרת ראשית */
+.welcome-title {
+    text-align: center;
+    direction: rtl;
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* תיאור קצר */
+.welcome-description {
+    text-align: center;
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+    direction: rtl;
+    color: #555;
+}
+
+/* מיכל כפתור */
+.welcome-button-container {
+    margin-top: 20px;
+    text-align: center;
+    direction: rtl;
+}
+
+/* כפתור הרשמה */
+.register-button {
+    width: 300px;
+    height: 60px;
+    background-color: #FFB84D;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+    .register-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+
+/* ✅ Sidebar Container */
+.sidebar-container {
+    width: 250px;
+    height: 100vh;
+    background-color: #e0e0e0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+}
+
+/* ✅ Sidebar Menu */
+.nav-menu {
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ✅ Navigation Items */
+.nav-item {
+    display: block;
+    padding: 12px 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+    .nav-item:hover {
+        background-color: #d6d6d6;
+    }
+
+/* ✅ Logout Button */
+.logout-btn {
+    color: red;
+    font-weight: bold;
+}
+
+    .logout-btn:hover {
+        background-color: #ffcccc;
+    }
+
+/* ✅ Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar-container {
+        width: 200px;
+    }
+
+    .nav-item {
+        font-size: 14px;
+    }
+}
