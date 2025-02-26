@@ -1,0 +1,60 @@
+﻿@page "/admin-content-managment"
+
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Policy = "AdminOnly")]
+
+@using BlazorWebAppLakeOfKnowledge04012025.Services
+@inject UserService UserService
+
+
+
+<!-- Body Section -->
+<main style="padding: 20px; min-height: 400px; display: flex; flex-direction: column; align-items: center;" dir="rtl">
+
+    <h4>ברוך הבא, @UserService.userName</h4>
+    <p> הינך מחובר/ת כעת כ : @UserService.role</p>
+
+
+    <h3>עדכון שאלות ותשובות</h3>
+
+    <!-- Dropdown for Question ID -->
+    <div style="margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;">
+        <label for="questionId" style="margin-bottom: 10px;">בחר מזהה שאלה:</label>
+        <select id="questionId" style="width: 300px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <option value="1">שאלה 1</option>
+            <option value="2">שאלה 2</option>
+            <option value="3">שאלה 3</option>
+        </select>
+    </div>
+
+    <!-- Question Text -->
+    <div style="margin-bottom: 20px; text-align: center; width: 100%; max-width: 600px; background-color: #f5f5f5; border-radius: 10px; padding: 20px;">
+        <h4>תוכן השאלה</h4>
+        <p id="questionText">מהו הטקסט של השאלה?</p>
+    </div>
+
+    <!-- Options -->
+    <div style="margin-bottom: 20px; text-align: center; width: 100%; max-width: 600px; background-color: #f5f5f5; border-radius: 10px; padding: 20px;">
+        <h4>אפשרויות תשובה</h4>
+        <p>תשובה א: <span id="optionA">אופציה א</span></p>
+        <p>תשובה ב: <span id="optionB">אופציה ב</span></p>
+        <p>תשובה ג: <span id="optionC">אופציה ג</span></p>
+        <p>תשובה ד: <span id="optionD">אופציה ד</span></p>
+    </div>
+
+    <!-- Textboxes for Editing -->
+    <div style="display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 600px;">
+        <input type="text" placeholder="עדכן את השאלה" value="מהו הטקסט של השאלה?" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;" />
+        <input type="text" placeholder="עדכן תשובה א" value="אופציה א" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;" />
+        <input type="text" placeholder="עדכן תשובה ב" value="אופציה ב" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;" />
+        <input type="text" placeholder="עדכן תשובה ג" value="אופציה ג" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;" />
+        <input type="text" placeholder="עדכן תשובה ד" value="אופציה ד" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;" />
+    </div>
+
+    <!-- Update Button -->
+    <div style="margin-top: 20px;">
+        <button style="padding: 10px 20px; background-color: #d9e8fb; border: none; border-radius: 5px; cursor: pointer;">
+            עדכן שאלה
+        </button>
+    </div>
+</main>

@@ -1,0 +1,86 @@
+﻿@page "/admin-student-details"
+@inject BlazorWebAppLakeOfKnowledge04012025.Services.ApiService ApiService
+@using projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Policy = "AdminOnly")]
+
+<main style="padding: 20px; min-height: 400px; display: flex; flex-direction: column; align-items: center;" dir="rtl">
+    
+
+    <h3>תלמידים (Students) - נתונים מה-API</h3>
+
+    @if (dataAllStudents == null || !dataAllStudents.Any())
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        <table border="1" style="width: 80%; text-align: center; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>מספר מזהה (ID)</th>
+                    <th>שם</th>
+                    <th>אימייל</th>
+                    <th>טלפון</th>
+                    <th>תאריך רישום</th>
+                    <th>רמה באנגלית</th>
+                    <th>רמה בעברית</th>
+                    <th>רמה בכמותי</th>
+                    <th>תוספת זמן</th>
+                    <th>פונט גדול</th>
+                    <th>התאמת רקע</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in dataAllStudents)
+                {
+                    <tr>
+                        <td>@student.Id</td>
+                        <td>@student.Name</td>
+                        <td>@student.Email</td>
+                        <td>@student.PhoneNumber</td>
+                        <td>@student.RegistrationDate.ToString("yyyy-MM-dd")</td>
+                        <td>@student.ProgressLevelEnglish</td>
+                        <td>@student.ProgressLevelHebrew</td>
+                        <td>@student.ProgressLevelQuantity</td>
+                        <td>@(student.ExtraTime ? "✔" : "❌")</td>
+                        <td>@(student.LargerFont ? "✔" : "❌")</td>
+                        <td>@(student.BackgroundAdjustment ? "✔" : "❌")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</main>
+
+
+
+
+@code {
+    private List<Guide> dataAllGuides;
+    private List<Student> dataAllStudents;
+    private List<User> allUsers = new(); // List that contains both guides and students
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Fetch data from API
+            dataAllGuides = await ApiService.GetDataAsyncAPIGetAllGuides();
+            dataAllStudents = await ApiService.GetDataAsyncAPIGetAllStudents();
+
+            // Combine both lists into a single list of type User
+            allUsers = new List<User>();
+            allUsers.AddRange(dataAllGuides);
+            allUsers.AddRange(dataAllStudents);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error fetching data: {ex.Message}");
+            dataAllGuides = new List<Guide>();
+            dataAllStudents = new List<Student>();
+            allUsers = new List<User>(); // Handle empty case
+        }
+    }
+}

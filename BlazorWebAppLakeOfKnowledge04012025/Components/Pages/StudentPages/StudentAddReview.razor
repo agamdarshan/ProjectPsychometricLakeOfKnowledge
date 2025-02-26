@@ -1,0 +1,117 @@
+﻿@page "/student-add-review"
+@inject BlazorWebAppLakeOfKnowledge04012025.Services.ApiService ApiService
+@inject BlazorWebAppLakeOfKnowledge04012025.Services.UserService UserService
+@using projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes
+
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Policy = "StudentOnly")]
+
+<main style="padding: 20px; min-height: 400px; display: flex; flex-direction: column; align-items: center;" dir="rtl">
+
+    <!-- User Info Section (Always First) -->
+    <div style="text-align: center; width: 100%; margin-bottom: 20px;">
+        <h4>ברוך הבא, @UserService.userName</h4>
+        <p> הינך מחובר/ת כעת כ : @UserService.role</p>
+    </div>
+
+    <!-- Review Form Section -->
+    <div style="width: 100%; max-width: 600px; background-color: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #333; margin-bottom: 20px;">הוסף סקירה חדשה</h2>
+
+        <!-- Student ID (Read-Only) -->
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #555;">מספר תלמיד:</label>
+            <input type="text" value="@UserService.userId" disabled
+                   style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #e9ecef;" />
+        </div>
+
+        <!-- Review Content Textarea -->
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #555;">תוכן הסקירה:</label>
+            <textarea @bind="reviewContent"
+                      style="width: 100%; min-height: 200px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; resize: vertical;"
+                      placeholder="הזן את הביקורת שלך כאן..."></textarea>
+        </div>
+
+        <!-- Error and Success Messages -->
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div style="color: red; margin-bottom: 15px; text-align: center;">
+                @errorMessage
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div style="color: green; margin-bottom: 15px; text-align: center;">
+                @successMessage
+            </div>
+        }
+
+        <!-- Submit Button -->
+        <div style="text-align: center;">
+            <button @onclick="SubmitReview"
+                    style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+                שלח סקירה
+            </button>
+        </div>
+    </div>
+</main>
+
+@code {
+    private string reviewContent = string.Empty;
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+
+    private async Task SubmitReview()
+    {
+        // Reset previous messages
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+
+        // Validate review content
+        if (string.IsNullOrWhiteSpace(reviewContent))
+        {
+            errorMessage = "אנא הזן תוכן סקירה.";
+            return;
+        }
+
+        // Validate user ID
+        if (string.IsNullOrEmpty(UserService.userId) || UserService.userId == "0")
+        {
+            errorMessage = "משתמש לא מזוהה. אנא התחבר מחדש.";
+            return;
+        }
+
+        // Create new review object
+        var newReview = new Review
+            {
+                StudentId = UserService.userId,
+                ReviewDate = DateTime.Now,
+                Content = reviewContent
+            };
+
+        try
+        {
+            // Attempt to add the review
+            var result = await ApiService.AddReviewAsync(newReview);
+
+            if (result.Contains("successfully"))
+            {
+                // Clear the text area and show success message
+                successMessage = "הסקירה נוספה בהצלחה!";
+                reviewContent = string.Empty;
+            }
+            else
+            {
+                // Show error from the API
+                errorMessage = result;
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any unexpected errors
+            errorMessage = $"שגיאה בהוספת סקירה: {ex.Message}";
+        }
+    }
+}

@@ -1,0 +1,28 @@
+﻿@page "/student-information"
+
+@using BlazorWebAppLakeOfKnowledge04012025.Services
+@inject UserService UserService
+
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Policy = "StudentOnly")]
+
+<section style="padding: 20px; min-height: 400px; display: flex; flex-direction: column; align-items: center; text-align: center;" dir="rtl">
+    
+
+    <h4>ברוך הבא, @UserService.userName</h4>
+    <p> הינך מחובר/ת כעת כ : @UserService.role</p>
+
+
+    <!-- Information Section -->
+    <div style="margin-top: 30px; padding: 20px; background-color: #f5f5f5; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); max-width: 600px;">
+        <h3 style="margin-bottom: 20px;">צפייה בנתונים אישיים</h3>
+        <p>
+            הסטודנט יוכל לצפות בפרטים האישיים שלו, לרבות סטטיסטיקות לגבי הביצועים שלו במבחנים ובתרגולים.
+        </p>
+        <hr style="margin: 20px 0;" />
+        <h3 style="margin-bottom: 20px;">ניתוח סטטיסטי והמלצות מותאמות</h3>
+        <p>
+            המערכת תציג ניתוח מפורט של התוצאות שלו בתרגולים ובמבחנים, כולל זיהוי תחומים חזקים ותחומים לשיפור. על בסיס הניתוח, המערכת תציע תוכניות המשך מותאמות לשיפור הביצועים.
+        </p>
+    </div>
+</section>

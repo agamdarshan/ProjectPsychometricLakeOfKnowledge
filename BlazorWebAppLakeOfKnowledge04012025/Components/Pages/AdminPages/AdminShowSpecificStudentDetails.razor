@@ -1,0 +1,78 @@
+﻿@page "/admin-show-specific-student-details"
+@inject BlazorWebAppLakeOfKnowledge04012025.Services.ApiService ApiService
+@using projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes
+
+@using BlazorWebAppLakeOfKnowledge04012025.Services
+@inject UserService UserService
+
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Policy = "AdminOnly")]
+
+
+<main style="padding: 20px; min-height: 400px; display: flex; flex-direction: column; align-items: center;" dir="rtl">
+    <h4>Welcome, @UserService.userName!</h4>
+    <p>Your role is: @UserService.role</p>
+
+    <h3>חיפוש תלמיד לפי מספר מזהה</h3>
+    <input type="text" @bind="studentIdInput" placeholder="הכנס מספר מזהה" style="margin: 10px; padding: 5px;" />
+    <button @onclick="FetchStudent" style="padding: 5px 10px; cursor: pointer;">חפש תלמיד</button>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <p style="color: red;">@errorMessage</p>
+    }
+
+    @if (studentData != null)
+    {
+        <h4>פרטי תלמיד</h4>
+        <table border="1" style="width: 80%; text-align: center; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>מספר מזהה</th>
+                    <th>שם</th>
+                    <th>אימייל</th>
+                    <th>טלפון</th>
+                    <th>תאריך רישום</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@studentData.Id</td>
+                    <td>@studentData.Name</td>
+                    <td>@studentData.Email</td>
+                    <td>@studentData.PhoneNumber</td>
+                    <td>@studentData.RegistrationDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</main>
+
+
+@code {
+    private string studentIdInput;
+    private Student studentData;
+    private string errorMessage;
+
+    private async Task FetchStudent()
+    {
+        errorMessage = string.Empty;
+        studentData = null;
+
+        if (!int.TryParse(studentIdInput, out int studentId))
+        {
+            errorMessage = "מספר מזהה חייב להיות מספר תקין.";
+            return;
+        }
+
+        var student = await ApiService.GetStudentByIdAsync(studentId);
+        if (student != null)
+        {
+            studentData = student;
+        }
+        else
+        {
+            errorMessage = $"תלמיד עם מספר מזהה {studentId} לא נמצא.";
+        }
+    }
+}

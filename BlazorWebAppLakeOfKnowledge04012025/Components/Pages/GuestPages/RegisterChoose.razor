@@ -1,0 +1,26 @@
+﻿@page "/register-choose"
+
+@using BlazorWebAppLakeOfKnowledge04012025.Services
+@inject UserService UserService
+
+
+<!-- Body Section -->
+<main style="padding: 20px; min-height: 400px; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;" dir="rtl">
+
+    <h4>ברוך הבא, @UserService.userName</h4>
+    <p> הינך מחובר/ת כעת כ : @UserService.role</p>
+
+    
+    <h2>בחר סוג רישום</h2>
+    <div style="margin-top: 20px;">
+        <!-- Student Registration Button -->
+        <button onclick="location.href='/register-student'" style="width: 300px; height: 60px; background-color: #ffcc99; border: none; border-radius: 10px; color: white; font-size: 18px; margin-bottom: 20px; cursor: pointer;">
+            רישום סטודנט
+        </button>
+
+        <!-- Guide Registration Button -->
+        <button onclick="location.href='/register-guide'" style="width: 300px; height: 60px; background-color: #99cc99; border: none; border-radius: 10px; color: white; font-size: 18px; cursor: pointer;">
+            רישום מדריך
+        </button>
+    </div>
+</main>
