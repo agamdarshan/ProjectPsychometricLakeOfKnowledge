@@ -1,0 +1,76 @@
+﻿@page "/admin-guide-details"
+@inject BlazorWebAppLakeOfKnowledge04012025.Services.ApiService ApiService
+@using projectPsychometricAgamLakeOfKnowladgeAPI04012025.Classes
+
+
+<main style="padding: 20px; min-height: 400px; display: flex; flex-direction: column; align-items: center;" dir="rtl">
+    <h3>מדריכים (Guides) - נתונים מה-API</h3>
+
+    @if (dataAllGuides == null || !dataAllGuides.Any())
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        <table border="1" style="width: 80%; text-align: center; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>מספר מזהה (ID)</th>
+                    <th>שם</th>
+                    <th>אימייל</th>
+                    <th>טלפון</th>
+                    <th>תאריך רישום</th>
+                    <th>מומחה באנגלית</th>
+                    <th>מומחה בכמותי</th>
+                    <th>מומחה בעברית</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var guide in dataAllGuides)
+                {
+                    <tr>
+                        <td>@guide.Id</td>
+                        <td>@guide.Name</td>
+                        <td>@guide.Email</td>
+                        <td>@guide.PhoneNumber</td>
+                        <td>@guide.RegistrationDate.ToString("yyyy-MM-dd")</td>
+                        <td>@(guide.ExpertiseEnglish ? "✔" : "❌")</td>
+                        <td>@(guide.ExpertiseQuantity ? "✔" : "❌")</td>
+                        <td>@(guide.ExpertiseHebrew ? "✔" : "❌")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</main>
+
+
+
+@code {
+    private List<Guide> dataAllGuides;
+    private List<Student> dataAllStudents;
+    private List<User> allUsers = new(); // List that contains both guides and students
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Fetch data from API
+            dataAllGuides = await ApiService.GetDataAsyncAPIGetAllGuides();
+            dataAllStudents = await ApiService.GetDataAsyncAPIGetAllStudents();
+
+            // Combine both lists into a single list of type User
+            allUsers = new List<User>();
+            allUsers.AddRange(dataAllGuides);
+            allUsers.AddRange(dataAllStudents);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error fetching data: {ex.Message}");
+            dataAllGuides = new List<Guide>();
+            dataAllStudents = new List<Student>();
+            allUsers = new List<User>(); // Handle empty case
+        }
+    }
+}

@@ -1,0 +1,31 @@
+﻿@page "/admin-main-page"
+
+@using BlazorWebAppLakeOfKnowledge04012025.Services
+@inject UserService UserService
+
+
+<!-- Body Section -->
+<main style="padding: 20px; min-height: 400px; display: flex; flex-direction: column; align-items: center;" dir="rtl">
+
+    <h4>ברוך הבא, @UserService.userName</h4>
+    <p> הינך מחובר/ת כעת כ : @UserService.role</p>
+
+    
+    <h3>ברוך הבא לאזור הניהול</h3>
+    <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 30px;">
+        <!-- User Management -->
+        <button style="width: 300px; height: 60px; background-color: #d9e8fb; border: none; border-radius: 10px; cursor: pointer; font-size: 18px;">
+            <a href="/admin-users-management" style="text-decoration: none; color: black;">ניהול משתמשים</a>
+        </button>
+
+        <!-- Content Management -->
+        <button style="width: 300px; height: 60px; background-color: #e8d9fb; border: none; border-radius: 10px; cursor: pointer; font-size: 18px;">
+            <a href="/admin-content-managment" style="text-decoration: none; color: black;">ניהול תוכן</a>
+        </button>
+
+        <!-- Data Analysis -->
+        <button style="width: 300px; height: 60px; background-color: #fbd9d9; border: none; border-radius: 10px; cursor: pointer; font-size: 18px;">
+            <a href="/admin-data-analysis" style="text-decoration: none; color: black;">צפייה בניתוח נתונים</a>
+        </button>
+    </div>
+</main>

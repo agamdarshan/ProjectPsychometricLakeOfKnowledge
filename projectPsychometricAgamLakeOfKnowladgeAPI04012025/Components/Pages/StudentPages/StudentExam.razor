@@ -1,0 +1,108 @@
+﻿@page "/student-exam"
+
+@using BlazorWebAppLakeOfKnowledge04012025.Services
+@inject UserService UserService
+
+<section style="padding: 20px; min-height: 400px; display: flex; flex-direction: column; align-items: center; text-align: center;" dir="rtl">
+    
+
+    <h4>ברוך הבא, @UserService.userName</h4>
+    <p> הינך מחובר/ת כעת כ : @UserService.role</p>
+
+
+
+    <!-- Exam Details Section -->
+    <h2>מבחן פסיכומטרי</h2>
+    <p>תאריך: 26.09.2024</p>
+    <p>פרק מספר: 1</p>
+    <p>נושא הפרק: כמותי</p>
+
+    <!-- Questions Section -->
+    <div style="width: 100%; max-width: 600px; margin-top: 20px;">
+        <!-- Question 1 -->
+        <div style="margin-bottom: 20px;">
+            <p>1. כמה זה 5 + 7?</p>
+            <div>
+                <label><input type="radio" name="question1" /> 10</label><br />
+                <label><input type="radio" name="question1" /> 11</label><br />
+                <label><input type="radio" name="question1" /> 12</label><br />
+                <label><input type="radio" name="question1" /> 13</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div style="margin-bottom: 20px;">
+            <p>2. מהו השורש הריבועי של 16?</p>
+            <div>
+                <label><input type="radio" name="question2" /> 2</label><br />
+                <label><input type="radio" name="question2" /> 3</label><br />
+                <label><input type="radio" name="question2" /> 4</label><br />
+                <label><input type="radio" name="question2" /> 5</label>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div style="margin-bottom: 20px;">
+            <p>3. כמה זה 8 * 3?</p>
+            <div>
+                <label><input type="radio" name="question3" /> 20</label><br />
+                <label><input type="radio" name="question3" /> 24</label><br />
+                <label><input type="radio" name="question3" /> 28</label><br />
+                <label><input type="radio" name="question3" /> 32</label>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div style="margin-bottom: 20px;">
+            <p>4. כמה זה 100 / 4?</p>
+            <div>
+                <label><input type="radio" name="question4" /> 20</label><br />
+                <label><input type="radio" name="question4" /> 25</label><br />
+                <label><input type="radio" name="question4" /> 30</label><br />
+                <label><input type="radio" name="question4" /> 40</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div style="margin-top: 30px;">
+        <button style="padding: 10px 20px; background-color: #d9e8fb; border: none; border-radius: 5px; margin-right: 10px; cursor: pointer;">
+            חזור לעמוד הקודם
+        </button>
+        <button style="padding: 10px 20px; background-color: #d9fbd9; border: none; border-radius: 5px; margin-left: 10px; cursor: pointer;">
+            עבור לעמוד הבא
+        </button>
+    </div>
+
+    <!-- Timer Section -->
+    <div style="position: fixed; top: 20px; right: 20px; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 5px; padding: 10px;">
+        <p>@GetFormattedTime()</p>
+    </div>
+</section>
+
+@code {
+    private int timeLeft = 20 * 60; // 20 minutes in seconds
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        StartTimer();
+    }
+
+    private async void StartTimer()
+    {
+        while (timeLeft > 0)
+        {
+            await Task.Delay(1000);
+            timeLeft--;
+            StateHasChanged();
+        }
+    }
+
+    private string GetFormattedTime()
+    {
+        int minutes = timeLeft / 60;
+        int seconds = timeLeft % 60;
+        return $"{minutes:D2}:{seconds:D2}";
+    }
+}
